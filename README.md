@@ -2,7 +2,7 @@
     <img width="141" src="http://antonsamper.github.io/gulp-webpack-boilerplate/images/logo-gulp-webpack-pink-fed4617544.svg" />
 </p>
 #gulp.js + webpack boilerplate for single page apps
-A clean and simple front-end ES6 boilerplate for single page applications using gulp.js and webpack.
+A clean and simple front-end ES6 boilerplate for web applications using gulp.js and webpack.
 
 [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/antonsamper/gulp-webpack-boilerplate/blob/master/LICENSE)
 [![Travis](https://img.shields.io/travis/antonsamper/gulp-webpack-boilerplate.svg)](https://travis-ci.org/antonsamper/gulp-webpack-boilerplate)
@@ -62,7 +62,7 @@ Task Name         | Description
 
 
 ## File Structure
-The default working directory for development is `src/`. This directory contains all the styles, scripts, fonts and 
+The default working directory for development is `src/`. This directory contains all the styles, scripts, fonts and
 images used to create the front-end of the website.
 
 ```
@@ -89,16 +89,16 @@ src/
 	|- components/
 	|- _variables.scss
 	|- main.scss
-|- index.html 
+|- index.html
 ```
 
 ### Fonts
-The `src/fonts/` folder should contain the self hosted fonts for the site. All the fonts directly inside this folder 
+The `src/fonts/` folder should contain the self hosted fonts for the site. All the fonts directly inside this folder
 will be copied to the `dist/x.x.x/fonts/` folder automatically.
 
 ### Icons
-The `src/images/icons/` folder should contain all the svg icons that should be combined to then be injected into 
-the page. Have a look at the following links to understand the technique adopted by the boilerplate to make use of 
+The `src/images/icons/` folder should contain all the svg icons that should be combined to then be injected into
+the page. Have a look at the following links to understand the technique adopted by the boilerplate to make use of
 svg icons:
 
 * https://css-tricks.com/icon-fonts-vs-svg/
@@ -108,15 +108,15 @@ svg icons:
 (The `<symbol>` element is generated and injected as part of the `minifyHtml` task)
 
 ### Images
-All images should be placed inside the `src/images/` folder. This is for consistency as opposed to a limitation 
-enforced by the `imagemin` task as this task will look for and minify all images inside the `src/` folder that have 
+All images should be placed inside the `src/images/` folder. This is for consistency as opposed to a limitation
+enforced by the `imagemin` task as this task will look for and minify all images inside the `src/` folder that have
 any of the following extensions: `.jpg` `.png` `.gif` `.svg`
 
 ### JS
-All the scripts should be placed inside the `src/js/` folder. These files will all be linted. The current setup assumes 
-`app.js` is the main bundle/manifest file (this is referenced in `paths.js`) and a component based approach for 
-features/functionality so that everything is inside of its own folder - this can include 
-tests, templates and specific styles if needed. 
+All the scripts should be placed inside the `src/js/` folder. These files will all be linted. The current setup assumes
+`app.js` is the main bundle/manifest file (this is referenced in `paths.js`) and a component based approach for
+features/functionality so that everything is inside of its own folder - this can include
+tests, templates and specific styles if needed.
 For example:
 
 ```
@@ -131,11 +131,11 @@ For example:
 ```
 
 ### Scss (SASS)
-This workflow uses, although it's not restricted to, the `scss` format for Sass. All `scss` files should be placed in 
+This workflow uses, although it's not restricted to, the `scss` format for Sass. All `scss` files should be placed in
 the `src/sass/` folder. The styles manifest is `main.scss`.
 
 ### Versioning
-The production task outputs versioned folders based on the version in your `package.json` file. For example, if your 
+The production task outputs versioned folders based on the version in your `package.json` file. For example, if your
 `package.json` version is `1.2.3` and you then run `npm run prod`, the following will be produced:
 ```
 dist/
@@ -148,7 +148,7 @@ dist/
 ```
 
 ### Releases
-The three main functions of `release-it` have been mapped as custom npm scripts. When creating a release all you have 
+The three main functions of `release-it` have been mapped as custom npm scripts. When creating a release all you have
 to do is run any of the following:
  *  `npm run release-patch`
  *  `npm run release-minor`
