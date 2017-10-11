@@ -33,10 +33,10 @@ gulp.task('html', () => {
     return gulp
         .src(sharedPaths.srcIndex)
         .pipe(plumber({errorHandler: sharedEvents.onError}))
-        .pipe(inject(series(styles, scriptsLibs, scriptsMain), {
-            ignorePath: sharedPaths.outputDir,
-            addRootSlash: false
-        }))
+        // .pipe(inject(series(styles, scriptsLibs, scriptsMain), {
+        //     ignorePath: sharedPaths.outputDir,
+        //     addRootSlash: false
+        // }))
         .pipe(inject(gulp.src(`${sharedPaths.imagesOutputFiles}/${sharedPaths.iconsFolderName}.svg`), {
             transform: function (filepath, file) {
                 return file.contents.toString();

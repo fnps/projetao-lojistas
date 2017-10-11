@@ -43,7 +43,8 @@ module.exports = function () {
         stylesAllSrcFiles: [`${srcDir}/**/*.scss`],
         stylesSrcGeneratedDir: `${srcDir}/sass/generated`,
         stylesOutputFiles: `${outputDir}/css/*.css`,
-        stylesOutputDir: `${outputDir}/css`
+        stylesOutputDir: `${outputDir}/css`,
+        nodeModules: `node_modules`
     };
 
 }();

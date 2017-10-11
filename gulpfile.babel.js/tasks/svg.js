@@ -14,7 +14,7 @@ import sharedEvents from '../shared/events.js';
 import gulp         from 'gulp';
 import plumber      from 'gulp-plumber';
 import svgstore     from 'gulp-svgstore';
-
+import rename       from 'gulp-rename';
 
 /*********************************************************************************
  2. TASK
@@ -23,6 +23,7 @@ import svgstore     from 'gulp-svgstore';
 export default () => {
     return gulp
         .src(sharedPaths.iconsSrcFiles)
+        .pipe(rename((path)=> path.basename = `${path.basename}-icon`))
         .pipe(plumber({errorHandler: sharedEvents.onError}))
         .pipe(svgstore({inlineSvg: true}))
         .pipe(gulp.dest(sharedPaths.imagesOutputFiles));
