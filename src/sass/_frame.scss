@@ -1,25 +1,113 @@
 .marcacao{
   border: 1px solid black;
 }
+.delimitador{
+  border-color: $color__lightgrey;
+  border-width: 0;
+  border-style: solid;
+}
+.del-right{
+  @extend .delimitador;
+  border-right-width: $size__delimitador_width;
+}
+.del-left{
+  @extend .delimitador;
+  border-left-width: $size__delimitador_width;
+}
+.del-bottom{
+  @extend .delimitador;
+  border-bottom-width: $size__delimitador_width;
+}
+.whitebg{
+  background-color: white;
+}
+body{
+  background-color: $color__main_bg;
+}
 
 #frame{
   @extend .d-flex, .flex-row;
 }
 aside.left{
-  @extend .marcacao;
+  @extend .d-flex, .flex-column;
+  @extend .align-items-center;
+  @extend .whitebg;
+
   height: 100%;
   height: 100vh;
   width: $size__left_sidebar_width;
+
+  #logo{
+    $padding: 20px;
+    padding:$padding;
+    width: $size__left_sidebar_width;
+    height: $size__header_height;
+    &>svg{
+      $size: $size__left_sidebar_width - 2*$padding;
+      width: $size;
+      height: $size;
+    }
+  }
+
+  nav{
+
+    position: relative;
+    $cursor_height: $size__left_sidebar_width/3;
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      background-color: $color__pink;
+      width: 8px;
+      left:-20px;
+      top: 0;
+      transition: left, 1s, top .5s;
+      box-shadow: 0px 1px 9px 3px rgba(0, 0, 0, 0.42);
+      border-radius: 100%;
+      height: $cursor_height;
+    }
+    &.cursor:before{
+      left: -4px;
+    }
+    @for $i from 1 through 10{
+      $top: $i * $size__left_sidebar_width - ($size__left_sidebar_width + $cursor_height)/2;
+      &.item-#{$i}:before{
+        top:$top;
+      }
+    }
+
+    &>div.item{
+      @extend .d-flex;
+      @extend .align-items-center, .justify-content-center;
+      width: $size__left_sidebar_width;
+      height: $size__left_sidebar_width;
+      text-align: center;
+      line-height: $size__left_sidebar_width;
+      .icon{
+        cursor: pointer;
+        stroke: $color__pink;
+        fill: $color__pink;
+        width: 40%;
+        height: 40%;
+        margin: auto;
+        transition: fill .5s;
+
+        &:hover{
+          fill:$color__pink_hightlight;
+        }
+
+      }
+    }
+  }
 }
 #beside{
-  @extend .flex-column;
+  @extend .d-flex, .flex-column;
   flex: 1 1 auto;
-  padding: 0 1em;
 }
 header.main{
   @extend .d-flex, .flex-row;
   @extend .align-items-center;
-  @extend .marcacao;
+  @extend .whitebg;
 
   font-size: $size__header_font;
   color: $color__header;
@@ -45,7 +133,6 @@ header.main{
   }
 }
 #user-account{
-  @extend .marcacao;
   @extend .d-flex, .flex-row;
   @extend .align-items-center, .justify-content-around;
 
@@ -85,6 +172,11 @@ header.main{
   }
 }
 aside.right{
-  @extend marcacao;
+  @extend .whitebg;
+
   height: calc(100vh - #{$size__header_height});
+  flex: 0 0 $size__right_sidebar_width;
+}
+#content{
+  flex: 1 1 100%;
 }

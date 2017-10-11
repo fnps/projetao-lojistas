@@ -1,8 +1,3 @@
-/*
- * @title Webpack
- * @description Webpack configuration file
- */
-
 
 /*********************************************************************************
  1. DEPENDENCIES
@@ -52,12 +47,13 @@ export default (() => {
     // Development extras
     if (process.env.GULP_WEBPACK_DEV === 'true') {
         config.debug = true;
-        config.plugins.push(new webpack.optimize.CommonsChunkPlugin({
-            name: `${vendorChunkFilename}`,
-            minChunks: function (module, count) {
-                return module.resource && module.resource.indexOf(path.resolve(sharedPaths.srcDir)) === -1;
-            }
-        }));
+        // code splitting
+        // config.plugins.push(new webpack.optimize.CommonsChunkPlugin({
+        //     name: `${vendorChunkFilename}`,
+        //     minChunks: function (module, count) {
+        //         return module.resource && module.resource.indexOf(path.resolve(sharedPaths.srcDir)) === -1;
+        //     }
+        // }));
         config.plugins.push(new webpack.SourceMapDevToolPlugin({
             exclude: `${vendorChunkFilename}.js`
         }));
