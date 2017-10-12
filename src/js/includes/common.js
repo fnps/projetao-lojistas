@@ -1,22 +1,22 @@
 import $ from 'jquery';
 
 let selectedItem = 0;
+let nav = $('aside nav');
+let items = $('aside nav .item');
 
 function setSelectedItem(item){
   selectedItem = item;
+
+  nav.addClass(`item-${item}`);
 }
 function onready(callback = ()=>{} ){
 
   $(()=>{
 
-
-    let nav = $('aside nav');
-    let items = $('aside nav .item');
-
     nav.addClass('cursor');
 
     function hoverIn(event){
-console.log(selectedItem);
+
       let item = $(event.target);
       let index = item.attr('data-index');
 
