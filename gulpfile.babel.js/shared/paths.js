@@ -22,11 +22,12 @@ module.exports = function () {
     const iconsFolderName = 'icons';
     const iconsSrcFiles = `${srcDir}/images/${iconsFolderName}/*.svg`;
     const scriptsMainFile = '*.js';
+    const srcIndex = `${srcDir}/*.html`;
 
     return {
         srcDir,
         outputDir,
-        srcIndex: `${srcDir}/index.html`,
+        srcIndex,
         imagesSrcFiles: [`${srcDir}/images/**/*.{jpg,png,gif,svg}`, `!${iconsSrcFiles}`],
         imagesOutputFiles: `${outputDir}/images`,
         iconsSrcFiles,
