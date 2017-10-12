@@ -4,7 +4,7 @@ let selectedItem = 0;
 let nav = $('aside nav');
 let items = $('aside nav .item');
 
-function setSelectedItem(item){
+function setSelectedItem(item = 0){
   selectedItem = item;
 
   nav.addClass(`item-${item}`);
@@ -13,6 +13,7 @@ function onready(callback = ()=>{} ){
 
   $(()=>{
 
+    setSelectedItem(nav.attr('data-selected'));
     nav.addClass('cursor');
 
     function hoverIn(event){

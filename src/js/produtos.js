@@ -1,6 +1,5 @@
-import {onready, setSelectedItem} from './includes/common';
+import {onready} from './includes/common';
 
-setSelectedItem(2);
 onready(()=>{
 
 });

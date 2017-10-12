@@ -1,19 +1,24 @@
 <!doctype html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <title>Frame</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/produtos.css">
 </head>
-<body>
-<div style="height: 0; width: 0; position: absolute; visibility: hidden"><!-- inject:svg --><!-- endinject --></div>
-<div id="frame">
 
-    <aside class="left del-right">
-      <a href="/">
-        <div id="logo">
-          <svg class="icon">
+<body>
+    <div style="height: 0; width: 0; position: absolute; visibility: hidden">
+        <!-- inject:svg -->
+        <!-- endinject -->
+    </div>
+    <div id="frame">
+
+        <aside class="left del-right">
+            <a href="/">
+                <div id="logo">
+                    <svg class="icon">
             <use xlink:href="#Logo-icon"></use>
           <svg>
         </div>
@@ -52,7 +57,7 @@
           Loja ModaJá
         </h1>
         <div id="user-account">
-          <button id="logout-btn" type="button" class="btn">
+          <button id="logout-btn" type="button" class="custom">
 
             <svg class="icon">
               <use xlink:href="#logout-icon"></use>
@@ -65,6 +70,175 @@
       </header>
       <div class="d-flex flex-row">
         <section id="content">
+
+
+          <header class="d-flex justify-content-between align-items-center mb-5">
+            <h1>Produtos</h1>
+            <button id="logout-btn" type="button" class="custom">
+
+              <svg class="icon">
+                <use xlink:href="#export-icon"></use>
+              <svg>
+
+              <div role="label" for="logout-btn">Exportar</div>
+            </button>
+          </header>
+
+
+            <div role="header" class="d-flex justify-content-between">
+              <div class="card">
+                <h1>
+                  <span>Última atualização</span>
+                  <svg class="icon">
+                    <use xlink:href="#dots-icon"></use>
+                  <svg>
+                </h1>
+                <p class="color__lime">04 Fev 10:05 AM</p>
+              </div>
+              <div class="card">
+                <h1>Produtos</h1>
+                <p class="color__pink">76<span class="color__lightgrey"> itens</span></p>
+              </div>
+              <div class="card">
+                <h1>Categorias</h1>
+                <p class="color__pink">04<span class="color__lightgrey"> tipos</span></p>
+
+              </div>
+              <div class="card">
+                <h1>Preço Médio</h1>
+                <p class="color__pink">R$136,00</p>
+              </div>
+            </div>
+            <div role="content" class="d-flex justify-content-between my-4">
+              <div id="filtros" class="card">
+                <div id="ordenacao">
+                  <h1>
+                    <span class="text-uppercase">Ordenar Produtos Por</span>
+                    <svg class="icon">
+                      <use xlink:href="#dots-icon"></use>
+                    <svg>
+                  </h1>
+                  <div>
+                    <select name="" id="" class="form-control">
+                      <option value="">Data de adição</option>
+                      <option value="">Menor preço</option>
+                      <option value="">Maior preço</option>
+                      <option value="">Visualizações <i class="fa fa-lock"></i></option>
+                    </select>
+                  </div>
+                </div>
+                <div id="filtragem">
+                  <h1>
+                    <span class="text-uppercase">Filtrar Produtos Por</span>
+                    <svg class="icon">
+                      <use xlink:href="#dots-icon"></use>
+                    <svg>
+                  </h1>
+                  <div class="selects">
+                    <select name="" id="" class="form-control">
+                      <option value="" disabled selected>Categoria</option>
+                    </select>
+                    <select name="" id="" class="form-control">
+                      <option value="" disabled selected>Cor</option>
+                    </select>
+                    <select name="" id="" class="form-control">
+                      <option value="" disabled selected>Preço</option>
+                    </select>
+                    <select name="" id="" class="form-control">
+                      <option value="" disabled selected>Visualizações</option>
+                    </select>
+                    <select name="" id="" class="form-control">
+                      <option value="" disabled selected>Cliques</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="card large">
+                <h1>Produtos</h1>
+                <ul class="produtos">
+                  <li class="produto">
+                    <div class="preview" style="background-image:url(https://images-na.ssl-images-amazon.com/images/I/61RFkqG2l4L._UL1500_.jpg)"></div>
+                    <div class="info">
+                      <header>
+                        <h1>Vestido Preto Maneiro</h1>
+                      </header>
+                      <footer>
+                        <h2>Vestido Curto</h2>
+                        <h3>R$86,00</h3>
+                      </footer>
+                    </div>
+                  </li>
+                  <li class="produto">
+                    <div class="preview" style="background-image:url(https://images-na.ssl-images-amazon.com/images/I/61RFkqG2l4L._UL1500_.jpg)"></div>
+                    <div class="info">
+                      <header>
+                        <h1>Vestido Preto Maneiro</h1>
+                      </header>
+                      <footer>
+                        <h2>Vestido Curto</h2>
+                        <h3>R$86,00</h3>
+                      </footer>
+                    </div>
+                  </li>
+                  <li class="produto">
+                    <div class="preview" style="background-image:url(https://images-na.ssl-images-amazon.com/images/I/61RFkqG2l4L._UL1500_.jpg)"></div>
+                    <div class="info">
+                      <header>
+                        <h1>Vestido Preto Maneiro</h1>
+                      </header>
+                      <footer>
+                        <h2>Vestido Curto</h2>
+                        <h3>R$86,00</h3>
+                      </footer>
+                    </div>
+                  </li>
+                  <li class="produto">
+                    <div class="preview" style="background-image:url(https://images-na.ssl-images-amazon.com/images/I/61RFkqG2l4L._UL1500_.jpg)"></div>
+                    <div class="info">
+                      <header>
+                        <h1>Vestido Preto Maneiro</h1>
+                      </header>
+                      <footer>
+                        <h2>Vestido Curto</h2>
+                        <h3>R$86,00</h3>
+                      </footer>
+                    </div>
+                  </li>
+                  <li class="produto">
+                    <div class="preview" style="background-image:url(https://images-na.ssl-images-amazon.com/images/I/61RFkqG2l4L._UL1500_.jpg)"></div>
+                    <div class="info">
+                      <header>
+                        <h1>Vestido Preto Maneiro</h1>
+                      </header>
+                      <footer>
+                        <h2>Vestido Curto</h2>
+                        <h3>R$86,00</h3>
+                      </footer>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              </div>
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         </section>
         <aside class="right del-left">
