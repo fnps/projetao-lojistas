@@ -63,8 +63,8 @@ aside.left{
       background-color: $color__pink;
       width: 8px;
       left:-20px;
-      top: 0;
-      transition: left, 1s, top .5s;
+      top: -80px;
+      transition: left, .5s, top .5s;
       box-shadow: 0px 1px 9px 3px rgba(0, 0, 0, 0.42);
       border-radius: 100%;
       height: $cursor_height;
@@ -83,15 +83,25 @@ aside.left{
       @extend .d-flex;
       @extend .align-items-center, .justify-content-center;
       width: $size__left_sidebar_width;
+      line-height: $size__left_sidebar_width;
+      text-align: center;
       height: $size__left_sidebar_width;
       text-align: center;
       line-height: $size__left_sidebar_width;
+      position: relative;
+
+      $clickable_size: 40%;
+      a{
+        position: absolute;
+        width: $clickable_size;
+        height: $clickable_size;
+      }
       .icon{
         cursor: pointer;
         stroke: $color__pink;
         fill: $color__pink;
-        width: 40%;
-        height: 40%;
+        width: $clickable_size;
+        height: $clickable_size;
         margin: auto;
         transition: fill .5s;
 
