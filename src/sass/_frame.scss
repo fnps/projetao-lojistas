@@ -10,6 +10,15 @@
 /* BOTAO */
 @import './components/card';
 
+html, body, #frame{
+  height: 100%;
+  width: 100%;
+}
+
+#content-container{
+  @extend .d-flex, .flex-row;
+  flex-grow: 1;
+}
 .marcacao{
   border: 1px solid black;
 }
