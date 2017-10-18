@@ -161,15 +161,17 @@ header.main{
   @extend .align-items-center, .justify-content-around;
 
   flex:0 0 $size__right_sidebar_width;
+  max-width: $size__right_sidebar_width;
   font-size: $size__header_font * .5;
   height: 100%;
-  padding: 0 3em;
+  padding: 0 1em;
 
   &>.avatar{
     $size: $size__header_height * .6;
     border-radius: 100%;
     height: $size;
     width: $size;
+    z-index: 9999;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -177,7 +179,7 @@ header.main{
 }
 aside.right{
   @extend .whitebg;
-  padding: 3em;
+  padding: 1em;
   font-size: 16px;
   flex: 0 0 $size__right_sidebar_width;
 
