@@ -62,9 +62,11 @@ aside.left{
 
   #logo{
     $padding: 20px;
-    padding:$padding;
     width: $size__left_sidebar_width;
     height: $size__header_height;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     &>svg{
       $size: $size__left_sidebar_width - 2*$padding;
       width: $size;
