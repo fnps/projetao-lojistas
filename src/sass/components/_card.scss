@@ -1,12 +1,14 @@
 .card{
   box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.05);
   border: none;
-  flex-basis: 20%;
   border-radius: .4em;
   padding: 1em;
   font-size: 16px;
   font-weight: 500;
   position: relative;
+  flex-basis: auto;
+  
+  flex-shrink: 0;
 
   &>*{
     margin: .2em;

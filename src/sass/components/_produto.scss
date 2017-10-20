@@ -37,3 +37,16 @@
     }
   }
 }
+.controle{
+  flex: 0 0 20%;
+  padding: 0 1em;
+  #add_new{
+    height: 2em;
+    width: 2em;;
+    fill: $color__pink;
+    transition: transform 1s cubic-bezier(0.6, 0.04, 1, 1);
+    &:hover{
+      transform: rotate(720deg);
+    }
+  }
+}

@@ -7,6 +7,9 @@
 #content .card:first-of-type{
   flex-basis: 30%;
 }
+.card{
+  flex-basis: 20%;
+}
 .card.large{
 
   flex-basis: #{60% + 2*10/3};
