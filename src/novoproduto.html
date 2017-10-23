@@ -65,19 +65,33 @@ Loja ModaJá
                 </header>
                 <div id="content-container" class="">
                     <section id="content">
-                        <header class="d-flex justify-content-between align-items-center mb-5">
-                            <h1>Novos Produtos</h1>
+                        <header id="page" class="d-flex justify-content-between align-items-center mb-5">
+                            <h1>Adicionar Produto</h1>
                         </header>
-                        <div role="header" class="d-flex justify-content-between">
-                            <h3>Escolha o que adicionar</h3>
-                            <h3>Descreva o seu produto</h3>
-                            <h3>Escolha o que adicionar</h3>
-                        </div>
 
                         <div role="form" class="d-flex justify-content-between my-4">
-                            <div id="form-cores" class="card">
+
+                            <div id="detalhes-produto" class="card">
+                                <div class="text input-row">
+                                    <label for="nome-produto">Nome</label>
+                                    <input type="text" name="" value="" id="nome-produto" placeholder="Vestido florido Elas Flores Amadas">
+                                </div>
+                                <div class="text input-row">
+                                    <label for="descricao-produto">Descrição</label>
+                                    <input type="text" name="" value="" id="nome-produto" placeholder="Tags">
+                                </div>
+                                <div class="text input-row">
+                                    <label for="marca-produto">Marca</label>
+                                    <input type="text" name="" value="" id="nome-produto" placeholder="Tags">
+                                </div>
+                            </div>
+                            <div id="finalizacao-produto" class="card mt-4">
+
+                            </div>
+
+                            <!-- <div id="form-cores" class="card">
                                 <h1>
-                                <span>Cor Principal</span>
+                                <span>Cor</span>
                                 </h1>
                                 <section class="color-picker">
                                     <input type="radio" name="color" id="#a64434" value="#a64434">
@@ -110,33 +124,9 @@ Loja ModaJá
                                     <label for="#a84334"></label>
                                 </section>
                                 <input type="color" name="" value="">
-                            </div>
-                            <div id="form-specs" class="card">
-                                <form action="">
-                                    <div>
-                                        <h1>Tamanho</h1>
-                                        <select class="form-control" name="">
-                                  <option value="">P</option>
-                                  <option value="">M</option>
-                                  <option value="">G</option>
-                                </select>
-                                    </div>
-                                    <div>
-                                        <h1>Quantidade</h1>
-                                        <input type="text" pattern="d{3}">
-                                    </div>
-                                </form>
-                                <div id="mais-specs">
-                                    <a href="#">Mais Especificações</a>
-                                </div>
-                            </div>
-                            <div id="form-fotos" class="card">
-                                <h1>Fotos</h1>
-                                <svg class="icon" id="add_new">
-                                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#plus-icon"> </use>
-                                </svg>
-                            </div>
-                        </div>
+                            </div> -->
+
+
                     </section>
                     <aside class="right del-left">
                         <header>
@@ -159,11 +149,11 @@ Loja ModaJá
 </svg>
 </a> </article>
                     </aside>
-                </div>
+                    </div>
             </section>
-        </div>
-        <footer class=""> </footer>
-        <script src="js/novoproduto.js"></script>
+            </div>
+            <footer class=""> </footer>
+            <script src="js/novoproduto.js"></script>
     </body>
 
 </html>

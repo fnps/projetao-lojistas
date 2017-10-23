@@ -10,8 +10,16 @@
 /* BOTAO */
 @import './components/card';
 
-html, body, #frame{
+html{
   height: 100%;
+  width: 100%;
+  color: $color__font;
+}
+body{
+  min-height: 100%;
+}
+#frame{
+  min-height: 100vh;
   width: 100%;
 }
 
@@ -261,4 +269,23 @@ aside.right{
 }
 .flexible-width{
   flex-basis: auto !important;
+}
+input{
+  padding: .2em;
+  display: block;
+}
+.fullwidth{
+  width: 100% !important;
+}
+.halfwidth{
+  width: 50% !important;
+}
+button{
+  border-color: transparent;
+}
+
+header#page{
+  h1{
+    color: $color__darker_font;
+  }
 }

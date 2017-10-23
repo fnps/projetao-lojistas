@@ -1,0 +1,24 @@
+.input-row{
+  width: 100%;
+  label{
+    text-transform: uppercase;
+    font-weight: 300;
+    display: block;
+  }
+  input{
+    display: block;
+    height: 3em;
+    width: 100%;
+    line-height: 3em;
+    padding: 1em;
+    border: 1px solid $color__lightgrey;
+    border-radius: 5px;
+    position: relative;
+    transition: border .5s;
+
+    &:focus{
+      border-bottom: 1px solid $color__pink_hightlight;
+      outline: none;
+    }
+  }
+}
