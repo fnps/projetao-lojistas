@@ -66,8 +66,15 @@
 
 #medidas-form .input-row {
   flex: 1 1 auto;
+  margin: 0 5px 0 5px;
+
+
   &:first-child(){
-    flex-grow: 2;
+
+    margin-left: 0;
+  }
+  &:last-child(){
+    margin-right: 0;
   }
   &>input, &>select{
     margin-top: 4px;
