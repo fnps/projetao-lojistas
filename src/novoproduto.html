@@ -69,62 +69,117 @@ Loja ModaJá
                             <h1>Adicionar Produto</h1>
                         </header>
 
-                        <div role="form" class="d-flex justify-content-between my-4">
+                        <div role="form" class="d-flex justify-content-between align-items-start my-3">
 
                             <div id="detalhes-produto" class="card">
-                                <div class="text input-row">
+                                <div class="text input-row my-3">
                                     <label for="nome-produto">Nome</label>
                                     <input type="text" name="" value="" id="nome-produto" placeholder="Vestido florido Elas Flores Amadas">
                                 </div>
-                                <div class="text input-row">
+                                <div class="text input-row my-3">
                                     <label for="descricao-produto">Descrição</label>
                                     <input type="text" name="" value="" id="nome-produto" placeholder="Tags">
                                 </div>
-                                <div class="text input-row">
+                                <div class="text input-row my-3">
                                     <label for="marca-produto">Marca</label>
-                                    <input type="text" name="" value="" id="nome-produto" placeholder="Tags">
+                                    <input type="text" name="" value="" id="nome-produto" placeholder="">
+                                </div>
+
+                                <header class="d-flex justify-content-between my-3">
+                                    <h2>Medidas</h2>
+                                    <button id="tabela-medidas-btn" class="custom filled">
+                                    Adicionar Tabela de Medidas da Loja
+                                  </button>
+                                </header>
+
+                                <div id="medidas-form" class="d-flex justify-content-between my-3">
+                                    <div class="input-row regularcase">
+                                        <label>Categoria</label>
+                                        <select class="form-control" name="">
+                                    </select>
+                                    </div>
+                                    <div class="input-row regularcase">
+                                        <label>Etiquetas</label>
+                                        <select class="form-control" name="">
+                                    </select>
+                                        <select class="form-control" name="">
+                                    </select>
+                                    </div>
+                                    <div class="input-row regularcase">
+                                        <label>Busto (cm)</label>
+                                        <input type="number" min="0">
+                                        <input type="number" min="0">
+                                    </div>
+                                    <div class="input-row regularcase">
+                                        <label>Cintura (cm)</label>
+                                        <input type="number" min="0">
+                                        <input type="number" min="0">
+                                    </div>
+                                    <div class="input-row regularcase">
+                                        <label>Quadril (cm)</label>
+                                        <input type="number" min="0">
+                                        <input type="number" min="0">
+                                    </div>
+                                </div>
+                                <div id="fotos-form" class="my-3">
+                                    <ul>
+                                        <li class="arquivo">
+                                            <div class="nome">
+                                                <svg class="icon">
+                                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#albums-icon"> </use>
+                                        </svg>
+                                                <label for="arquivo">VestidoFlorido.jpg</label>
+                                            </div>
+
+                                            <p class="controles">
+                                                <a href="#">Editar</a>
+                                                <a href="#">Remover</a>
+                                            </p>
+                                            <button id="adicionar-foto-btn" class="custom filled">+ Adicionar Foto</button>
+                                        </li>
+                                    </ul>
+                                    <div id="drag-fotos" class="my-3">
+                                        <p>
+                                            <svg class="icon">
+                                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#upload-icon"> </use>
+                                            </svg> Você também pode arrastar arquivos pra cá
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                            <div id="finalizacao-produto" class="card mt-4">
+                            <div id="finalizacao-produto" class="card">
+                                <div id="form-cores" class="input-row my-3">
+
+                                    <label>Cor</label>
+                                    <section class="color-picker input">
+                                        <input type="radio" name="color" id="#a64434" value="#a64434">
+                                        <label for="#a64434"></label>
+
+                                        <input type="radio" name="color" id="#f44336" value="#f44336">
+                                        <label for="#f44336"></label>
+
+                                        <input type="radio" name="color" id="#a44554" value="#a44554">
+                                        <label for="#a44554"></label>
+
+                                        <input type="radio" name="color" id="#f89336" value="#f89336">
+                                        <label for="#f89336"></label>
+
+                                        <input type="radio" name="color" id="#a84334" value="#a84334">
+                                        <label for="#a84334"></label>
+                                    </section>
+                                </div>
+                                <div class="input-row my-3">
+                                    <label for="">URL</label>
+                                    <input type="text" name="" value="" id="url-produto" placeholder="www.lojamodaja.com.br/calca1237">
+                                </div>
+                                <div class="input-row my-3">
+                                    <label for="">Preço</label>
+                                    <input type="text" name="" value="" id="preco-produto" placeholder="R$ 136,00">
+                                </div>
+
+                                <button id="adicionar-foto-btn" class="custom filled my-3">Adicionar Produto</button>
 
                             </div>
-
-                            <!-- <div id="form-cores" class="card">
-                                <h1>
-                                <span>Cor</span>
-                                </h1>
-                                <section class="color-picker">
-                                    <input type="radio" name="color" id="#a64434" value="#a64434">
-                                    <label for="#a64434"></label>
-
-                                    <input type="radio" name="color" id="#f44336" value="#f44336">
-                                    <label for="#f44336"></label>
-
-                                    <input type="radio" name="color" id="#a44554" value="#a44554">
-                                    <label for="#a44554"></label>
-
-                                    <input type="radio" name="color" id="#f89336" value="#f89336">
-                                    <label for="#f89336"></label>
-
-                                    <input type="radio" name="color" id="#a84334" value="#a84334">
-                                    <label for="#a84334"></label>
-
-
-
-                                    <input type="radio" name="color" id="#f44336" value="#f44336">
-                                    <label for="#f44336"></label>
-
-                                    <input type="radio" name="color" id="#f89336" value="#f89336">
-                                    <label for="#f89336"></label>
-
-                                    <input type="radio" name="color" id="#a64434" value="#a64434">
-                                    <label for="#a64434"></label>
-
-                                    <input type="radio" name="color" id="#a84334" value="#a84334">
-                                    <label for="#a84334"></label>
-                                </section>
-                                <input type="color" name="" value="">
-                            </div> -->
 
 
                     </section>

@@ -1,16 +1,26 @@
 .input-row{
+
   width: 100%;
   label{
+    height: 24px;
     text-transform: uppercase;
     font-weight: 300;
     display: block;
+    margin-bottom: 6px;
   }
-  input{
+  &.regularcase{
+    label{
+      text-transform: none;
+    }
+  }
+  .input, input, select, .inputlooks{
+    height: 50px !important;
+  }
+  input, select, .inputlooks{
     display: block;
-    height: 3em;
     width: 100%;
     line-height: 3em;
-    padding: 1em;
+    padding: 5px;
     border: 1px solid $color__lightgrey;
     border-radius: 5px;
     position: relative;

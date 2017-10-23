@@ -22,10 +22,17 @@ body{
   min-height: 100vh;
   width: 100%;
 }
-
+p{
+  margin-bottom: 0;
+}
+ul{
+  padding:0;
+  margin:0; 
+}
 a{
   color:$color__pink;
   text-decoration: underline;
+  transition: color, .5s;
 
   &:hover{
     color: $color__pink_hightlight;
@@ -288,4 +295,8 @@ header#page{
   h1{
     color: $color__darker_font;
   }
+}
+
+.icon{
+  fill: $color__pink;
 }

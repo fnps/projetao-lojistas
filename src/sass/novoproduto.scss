@@ -1,6 +1,5 @@
 /* FRAME */
 @import "frame";
-@import "./components/card";
 @import "./components/form-input";
 
 .color-picker {
@@ -36,17 +35,106 @@
             background-color: #a64434;
         }
     }
-
+    input{
+      display: none;
+    }
     input:checked + label {
         border-color: $color__pink;
     }
 }
 
+#detalhes-produto, #finalizacao-produto{
+  padding: 2em;
+  color: $color__font;
+  font-size: 16px;
+  h2{
+    color: $color__darker_font;
+  }
+}
 #detalhes-produto{
   flex: 1 1 auto;
-  margin-right: 1em;
+  margin-right: 16px;
+
+  button{
+    width: 200px;
+  }
 }
 #finalizacao-produto{
   flex: 1 1 auto;
-  margin-left: 1em;
+  margin-left: 16px;
+}
+
+#medidas-form .input-row {
+  flex: 1 1 auto;
+  &:first-child(){
+    flex-grow: 2;
+  }
+  &>input, &>select{
+    margin-top: 4px;
+  }
+}
+#fotos-form{
+  .arquivo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    $height: 3em;
+    height: $height;
+
+    .nome{
+      height: $height;
+      line-height: $height;
+      display: flex;
+      align-items: center;
+
+      .icon{
+        display: inline;
+
+        $width: 2em;
+        height:$width;
+        width: $width;
+      }
+      label{
+        display: inline;
+        margin: 0 1em;
+      }
+    }
+    .controles{
+      a{
+        font-size:.6em;
+        margin: 0 1em;
+        text-decoration: none;
+        color: $color__lightgrey;
+        &:hover{
+          color: $color__pink_hightlight;
+        }
+      }
+    }
+    button{
+      justify-content: center;
+    }
+  }
+  #drag-fotos{
+    border: 3px dashed $color__pink;
+    border-radius: 10px;
+    height: 8em;
+    padding: 1em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p{
+      color: $color__pink;
+    }
+    .icon{
+      $size: 2em;
+      height: $size;
+      width: $size;
+
+      animation-name: floating;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+
+    }
+  }
 }

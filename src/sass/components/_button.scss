@@ -3,6 +3,7 @@ button.custom{
   @extend .d-flex, .flex-row;
   @extend .btn;
 
+  white-space: unset;
   $color: $color__pink;
   $high: $color__pink_hightlight;
 
@@ -13,6 +14,17 @@ button.custom{
   font-size: inherit;
   cursor: pointer;
   transition: color .5s, border-color .5s;
+  justify-content: center;
+  align-items: center;
+
+  &.filled{
+    background-color: $color;
+    color: $color__isthiswhite_pink;
+
+    &:hover{
+      color: white;
+    }
+  }
 
   &:hover{
     color: $high;
