@@ -1,2 +1,204 @@
 /* FRAME */
 @import "frame";
+
+ul.produtos{
+  @extend .d-flex;
+  @extend .justify-content-between;
+
+  flex-wrap: wrap;
+  padding: 0;
+  .produto{
+    margin: .5em 0;
+    flex: 0 0 48%;
+  }
+}
+
+
+.pink_bar {
+
+      content: '';
+      display: block;
+      width: 4%;
+      height: 5px;
+      background-color: $color__pink;
+      margin-bottom: .5em;
+      border-radius : 15px;
+}
+
+.cardProdutos {
+  @extend .d-flex;
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.05);
+  border: none;
+  flex-basis: 30%;
+  border-radius: .4em;
+  $padding: 10px;
+  $size: 1.4*$size__header_height;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  margin : 20px;
+	
+  &>*{
+    margin: 40px;
+  }
+  h1{
+    position: relative;
+    font-size: .7em;
+    .icon{
+      &>*{
+        fill: $color__lightgrey;
+      }
+      position: absolute;
+      right: 0;
+      height: 1em;
+      width: 2em;;
+    }
+  }
+    p{
+	    span{
+	      font-size:.8em;
+	      font-weight: 400;
+	    }
+	    
+	    font-size: 1.2em;
+	    letter-spacing: .1em;
+    }
+
+  .preview{
+  	
+  	border-radius: 15px;
+    $height: $size - 2*$padding;
+    height:$height;
+    width: $height*.7;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 30px;
+  	}
+
+   .info{
+    @extend .d-flex, .flex-column;
+    @extend .justify-content-between;
+    margin-left: $padding;
+
+    h1{
+      margin: 0;
+      font-size: 1.5em;
+    }
+    h2{
+      margin: 0;
+      font-size: .8em;
+    }
+    h3{
+      margin: 0;
+      margin-top: .6em;
+      font-size: .8em;
+    }
+
+    p{
+       font-size:1em;
+    }
+  }
+
+   .metainfo{
+    @extend .d-flex, .flex-row, .justify-content-center;
+    border-collapse: collapse;
+
+   .p-2{
+   	border: 0.5px $color__lightgrey solid;
+   	border-radius: 0px;
+   	flex-basis: 50%;
+
+   	}
+
+   	p {
+   		font-size:25px;
+   	}
+  }
+
+
+}
+
+
+
+button.sidebar{
+	  @extend .d-flex, .flex-row;
+	  @extend .btn;
+
+	  $color: $color__pink;
+	  $high: $color__pink_hightlight;
+
+	  background-color: transparent;
+	  border: 1px solid $color;
+	  padding: .5em;
+	  color: $color;
+	  font-size: 10px;
+	  cursor: pointer;
+	  transition: color .5s, border-color .5s;
+	  margin:8px;
+
+	  &:hover{
+	    color: $high;
+	    border-color: $high;
+ 	 }
+
+	 .icon{
+	    $size: .5*$size__right_sidebar_width;
+	    height: 0.5em;
+	    width: 0.5em;
+
+		    *{
+		      stroke: $color;
+		      fill: $color;
+		    }
+	 }
+  
+}
+
+
+#myProgress {
+    width: 100%;
+    background-color: $color__lightgrey;
+    border-radius: 15px;
+}
+
+#myBar {
+    width: 10%;
+    height: 5px;
+    background-color: black;
+    border-radius: 15px;
+} 
+
+
+
+
+
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    
+}
+
+
+.modal-content {
+ 	@extend .d-flex , .justify-content-center;
+ 	background-color: #fefefe;
+    width: 25%;
+    padding: 20px;
+    border: 1px $color__pink solid;
+    left: 40%;
+    top : 30%;
+
+   
+
+}
