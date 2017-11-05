@@ -1,84 +1,85 @@
 <!doctype html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <title>Ideal</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/painel.css">
-    <script> 
 
-    function move() {
-	    var elem = document.getElementById('myBar'); 
-	    var width = 10;
-	    var id = setInterval(frame, 10);
-	    function frame() {
-	        if (width >= 96) {
-	            clearInterval(id);
-	        } else {
-	        	if (width>=70)
-	        	{
-	        		elem.style.backgroundColor='Crimson';
-	        	}
-	            width++; 
-	            elem.style.width = width + '%'; 
-	                   
-	        }
-	    }
+    <head>
+        <meta charset="utf-8">
+        <title>Ideal</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/painel.css">
+        <script>
+            function move() {
+                var elem = document.getElementById('myBar');
+                var width = 10;
+                var id = setInterval(frame, 10);
 
-	    var card = document.getElementById('orcamentoCard');
-	    var data = document.getElementById('dataAtual');
-	    var block2 = document.getElementById('orcamento');
-	    var cliques = document.getElementById('cliques');
-	    var orcamentoAtual = document.getElementById('orcamentoAtual');
- 
- 
-	    cliques.innerHTML = "817"
+                function frame() {
+                    if (width >= 96) {
+                        clearInterval(id);
+                    } else {
+                        if (width >= 70) {
+                            elem.style.backgroundColor = 'Crimson';
+                        }
+                        width++;
+                        elem.style.width = width + '%';
 
- 		block2.innerHTML ='R$ 77,90';
- 		block2.style.color = 'white';
+                    }
+                }
 
-	    card.style.backgroundColor = 'Crimson';
-	    card.style.color = 'white';
-	        	    
-	    orcamentoAtual.style.color = 'Crimson';
-	    orcamentoAtual.innerHTML="R$ 77,90 ";
+                var card = document.getElementById('orcamentoCard');
+                var data = document.getElementById('dataAtual');
+                var block2 = document.getElementById('orcamento');
+                var cliques = document.getElementById('cliques');
+                var orcamentoAtual = document.getElementById('orcamentoAtual');
 
-	    data.innerHTML='14 de Outubro'
 
-	}
+                cliques.innerHTML = "817"
 
-	    
-	function modalFunction() {
-		var modal = document.getElementById('myModal');
-		modal.style.display = 'block';
-	    
-	}
+                block2.innerHTML = 'R$ 77,90';
+                block2.style.color = 'white';
 
-    function modalFunctionDissapear() {
-     var modal = document.getElementById('myModal');
-   	 modal.style.display = 'none';
-	}
+                card.style.backgroundColor = 'Crimson';
+                card.style.color = 'white';
 
-	function Painel1A ()
+                orcamentoAtual.style.color = 'Crimson';
+                orcamentoAtual.innerHTML = "R$ 77,90 ";
 
-	{
-		move();
-		modalFunction();
-	}
-	
+                data.innerHTML = '14 de Outubro'
 
-	
-	</script>
-  </head>
-<body>
+            }
 
-<div style="height: 0; width: 0; position: absolute; visibility: hidden"><!-- inject:svg --><!-- endinject --></div>
-<div id="frame">
 
-    <aside class="left del-right">
-      <a href="/">
-        <div id="logo">
-          <svg class="icon">
+            function modalFunction() {
+                var modal = document.getElementById('myModal');
+                modal.style.display = 'block';
+
+            }
+
+            function modalFunctionDissapear() {
+                var modal = document.getElementById('myModal');
+                modal.style.display = 'none';
+            }
+
+            function Painel1A()
+
+            {
+                move();
+                modalFunction();
+            }
+        </script>
+    </head>
+
+    <body>
+
+        <div style="height: 0; width: 0; position: absolute; visibility: hidden">
+            <!-- inject:svg -->
+            <!-- endinject -->
+        </div>
+        <div id="frame">
+
+            <aside class="left del-right">
+                <a href="/">
+                    <div id="logo">
+                        <svg class="icon">
             <use xlink:href="#Logo-icon"></use>
           <svg>
         </div>
@@ -97,16 +98,21 @@
           <svg>
         </div>
         <div class="item" data-index="3">
+          <a href="/produto.html"></a>
           <svg class="icon link">
             <use xlink:href="#label-icon"></use>
           <svg>
         </div>
-    
-      </nav>
-    </aside>
-    <section id="beside" class="">
-      <header class="main del-bottom">
-        <svg class="icon">
+        <div class="item" data-index="4">
+            <svg class="icon link">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#info-icon"> </use>
+</svg>
+
+                        </nav>
+            </aside>
+            <section id="beside" class="">
+                <header class="main del-bottom">
+                    <svg class="icon">
           <use xlink:href="#shop-icon"></use>
         <svg>
         <h1>
@@ -125,16 +131,16 @@
         </div>
       </header>
       <div id="content-container" class="">
-        
+
 
         <section id="content">
-          <header>     
+          <header>
               <h1> <strong>Painel<br><br></strong> </h1>
           </header>
 
 
 
-          
+
           <div role="header" class="d-flex justify-content-between">
             <div id="orcamentoCard" class="card">
                     <h1 style="font-size: 15px"><strong>Orçamento da Campanha</strong></h1>
@@ -160,13 +166,13 @@
           <br><br>
         <h5> <strong> Peças mais procuradas </strong> <br> </h5>
         <div class="pink_bar"></div>
-        
+
 
         <ul class="produtos">
 
-                 
+
                   <li class="cardProdutos">
-                    
+
                     <div class= "d-flex flex-column">
 
                       <div class= "d-flex p-2 flex-row">
@@ -175,28 +181,28 @@
                         </aside>
 
                         <article>
-                          <div class="info">                              
+                          <div class="info">
                               <h1><strong >1º Lugar</strong></h1>
                               <p class="color__lightgrey">Vestido com amarração frontal <span ><br>R$136,00</span></p>
-                              <p class="color__lightgrey"></p>            
+                              <p class="color__lightgrey"></p>
                           </div>
                         </article>
                       </div>
-                        
+
                         <div class="p-2">
                         <div class="metainfo">
                              <div class="p-2 "> <h5>Visualizações</h5>  <p class="color__lightgrey">49</p> </div>
-                             <div class="p-2 "> <h5>Cliques</h5>  <p class="color__pink">15</p> </div> 
+                             <div class="p-2 "> <h5>Cliques</h5>  <p class="color__pink">15</p> </div>
                         </div>
                         </div>
-                        
+
 
                     </div>
                   </li>
 
 
                   <li class="cardProdutos">
-                    <div class= "d-flex flex-column">                  
+                    <div class= "d-flex flex-column">
                     <div class= "d-flex p-2 flex-row">
 
                     <aside>
@@ -205,18 +211,18 @@
 
                     <article>
                     <div class="info">
-                        
+
                         <h1><strong >2º Lugar</strong></h1>
                         <p class="color__lightgrey">Jeans skinny stone washed<span ><br>R$112,00</span></p>
-                        <p class="color__lightgrey"></p>            
+                        <p class="color__lightgrey"></p>
                     </div>
 
                     </div>
-                    
+
                     <div class="p-2">
                     <div class="metainfo">
                          <div class="p-2 "> <h5>Visualizações</h5>  <p class="color__lightgrey">42</p> </div>
-                         <div class="p-2 "> <h5>Cliques</h5>  <p class="color__pink">11</p> </div> 
+                         <div class="p-2 "> <h5>Cliques</h5>  <p class="color__pink">11</p> </div>
                     </div>
                     </article>
                     </div>
@@ -227,7 +233,7 @@
 
                   <li class="cardProdutos">
 
-                    <div class= "d-flex flex-column">                   
+                    <div class= "d-flex flex-column">
                     <div class= "d-flex p-2 flex-row">
 
                     <aside>
@@ -235,18 +241,18 @@
                     </aside>
 
                     <article>
-                      <div class="info">                     
+                      <div class="info">
                           <h1><strong>3º Lugar</strong></h1>
                           <p class="color__lightgrey">Blusa acetinada geométrica com tiras <span ><br>R$86,00</span></p>
                           <p class="color__lightgrey"></p>
                       </div>
-                
+
                    </div>
 
                      <div class="p-2">
                      <div class="metainfo">
                           <div class="p-2 "> <h5>Visualizações</h5>  <p class="color__lightgrey">37</p> </div>
-                          <div class="p-2 "> <h5>Cliques</h5>  <p class="color__pink">9</p> </div> 
+                          <div class="p-2 "> <h5>Cliques</h5>  <p class="color__pink">9</p> </div>
                      </div>
                     </article>
                     </div>
@@ -274,9 +280,9 @@
             <div class="d-flex  flex-row ">
 
                            <div class="p-2 "> <h4 class = "color__lightgrey"> 1 de outubro de 2017</h4> </div>
-                           <div class="p-2 "> <h4 class="color__lightgrey"> 31 de outubro de 2017</h4> </div> 
+                           <div class="p-2 "> <h4 class="color__lightgrey"> 31 de outubro de 2017</h4> </div>
           </article>
-         
+
          <article class="sidebar-summary-item">
 
             <h4 style="color:black">Editar o orçamento</h4>
@@ -290,10 +296,10 @@
 		         </button>
 		    </div>
             <h4 class="color__lightgrey">14 de outubro de 2017</h4>
-          
+
           </article>
 
-          <article class="sidebar-summary-item">            
+          <article class="sidebar-summary-item">
             <div class="d-flex  flex-row justify-content-around">
            		 <img class="p-2" src="https://image.freepik.com/icones-gratis/codigo-de-barras_318-31992.jpg"  height="60" width="60">
 		        <a href="/">
@@ -303,51 +309,52 @@
 		              <rect>
 		            </svg>
 
-		            <div role="label" for="gerarBoleto-btn">Gerar Boleto</div>
-		         </button>
-		        </a>
-		    </div>
-          </article>
+                    <div role="label" for="gerarBoleto-btn">Gerar Boleto</div>
+                    </button>
+                    </a>
+                    </div>
+                    </article>
 
 
 
-        </aside>
-      </div>
-    </section>
+                    </aside>
+        </div>
+        </section>
 
-  </div>
+        </div>
 
-</div>
-<footer class=""></footer>
-<script src="js/painel.js"></script>
+        </div>
+        <footer class=""></footer>
+        <script src="js/painel.js"></script>
 
 
 
-</div>
+        </div>
 
-<div id="myModal" class="modal">
+        <div id="myModal" class="modal">
 
- <div class="modal-content">
-    <p>O orçamento da sua campanha está próximo ao fim, atulize para continuar aparecendo com destaque para novos clientes</p>
-   
-    <div class = "d-flex justify-content-around ">
-    <button id="atualizar-btn" type="button" class="sidebar" onclick="">
+            <div class="modal-content">
+                <p>O orçamento da sua campanha está próximo ao fim, atulize para continuar aparecendo com destaque para novos clientes</p>
+
+                <div class="d-flex justify-content-around ">
+                    <button id="atualizar-btn" type="button" class="sidebar" onclick="">
 		<svg class="icon"> <rect></rect> </svg>
 		<div role="label" for="atualizar-btn">Atualizar agora</div>
  	</button>
- 	<button id="entendi-btn" type="button" class="sidebar" onclick="modalFunctionDissapear()">
+                    <button id="entendi-btn" type="button" class="sidebar" onclick="modalFunctionDissapear()">
 		<svg class="icon"> <rect> </rect></svg>
 		<div role="label" for="entendi-btn">Ok, entendi</div>
  	</button>
- 	</div>
-  </div>
+                </div>
+            </div>
 
-</div>
-
-
+        </div>
 
 
 
 
-</body>
+
+
+    </body>
+
 </html>
