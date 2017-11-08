@@ -23,17 +23,17 @@ footer {
 
 }
 .btn{
-	border-radius: 10px;
-	margin-right: 20px;
-	padding-left: 45px;
-    padding-right: 45px;
-    padding-bottom: 10px;
-    padding-top: 10px;
+	border-radius: 20px;
+    margin-right: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 8px;
+    padding-top: 8px;
     background-color: #F8286C;
     border-color: #F8286C;
     font-weight: lighter;
     font-family: 'Oxygen', sans-serif;
-
+    color: #fff;
 }
 .botoes{
 	margin-top: 20px;
@@ -55,18 +55,18 @@ footer {
 	border: 1px solid #000;
 	margin-bottom: 25px;
 	width: 100%;
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding: 10px 10px 10px 10px;
 }
 h1{
 	margin-bottom: 35px;
 	margin-top: 0px;
 	font-family: 'Oxygen', sans-serif;
 	font-size: 22px;
+	font-weight: 300;
 }
 .social{
 	position: relative;
-	margin-top: 0px;
+	margin-top: 7px;
 	margin-right: 30px;
 	font-size: 35px;
 
@@ -77,6 +77,7 @@ h1{
 .logo{
 	margin-top: 12px;
 	width: 133px;
+	margin-left: 80px;
 }
 i{
 	margin-right: 15px;
