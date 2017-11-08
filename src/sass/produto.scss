@@ -1,0 +1,175 @@
+/* FRAME */
+@import "frame";
+/* FONT AWESOME */
+@import "font-awesome/css/font-awesome";
+@import "./components/produto";
+
+[role='content']{
+  align-items: flex-start;
+}
+#main-image{
+  border-radius: .4em;
+  width: 25%;
+  height: auto;
+  margin-right: 40px;
+}
+#main-info{
+  flex: 1 1 auto;
+  color: $color__font;
+
+  #marca-preco-cor{
+    display:flex;
+    align-items: stretch;
+    justify-content: space-between;
+    font-weight: 400;
+
+
+    &>div{
+      display: flex;
+      flex-direction: column;
+      flex: 0 0 30%;
+      align-items: center;
+      &>h2{
+        min-width: 100%;
+        margin:1em 0;
+      }
+      &>div{
+        border: 1px solid $color__lightgrey;
+        padding: 15px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+
+    }
+
+  }
+  .icon{
+    $size: 2em;
+    height:$size;
+    width:$size;
+    margin-right: .4em;
+  }
+  #medidas{
+    margin-top: 40px;
+
+    .selecao{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 30%;
+    }
+    .selecao > div{
+      transition: color 1s, border 1s, background-color 1s;
+      align-items: center;
+      cursor: pointer;
+      width: 100%;
+      .icon{
+
+        transition: transform 1s, fill 1s;
+        transform: rotateZ(90deg);
+      }
+      &:hover{
+        background-color: $color__pink;
+        color: white;
+        border: 1px solid transparent;
+        .icon{
+          fill: white;
+        }
+      }
+      &.selected{
+        background-color: $color__pink;
+        color: white;
+        border: 1px solid transparent;
+        .icon{
+          fill: white;
+          transform: rotateZ(0deg);
+        }
+      }
+
+      display: flex;
+      justify-content:space-between;
+      padding: 1em;
+      border-radius:10px;
+      border: 1px solid $color__lightgrey;
+      margin: 1em 0;
+    }
+  }
+}
+h2{
+  font-size: 16px;
+  font-weight: 400;
+  text-transform:uppercase;
+
+}
+.cor-tipo{
+  align-items: stretch !important;
+  label{
+    align-items: center;
+    display: flex;
+    margin: 0;
+  }
+  .amostra{
+    flex: 1 1 auto;
+    margin-left:1em;
+  }
+  .estampada{
+    background-image: url(http://zeedog.vteximg.com.br/arquivos/estampas_mahalo.jpg?v=636337249207600000);
+    background-size:cover;
+  }
+}
+.info{
+  width: 30%;
+  border: 2px solid $color__pink;
+  border-radius: 10px;
+
+  &>div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 6%;
+    border-bottom: 1px solid $color__lightgrey;
+
+    &:last-child{
+      bottom-bottom:none;
+    }
+  }
+  margin-left: 2em;
+}
+.real:before{
+  content: 'R$ ';
+}
+.cm:after{
+  content: 'cm';
+}
+
+.url{
+
+  &:before{
+    content: 'URL';
+  }
+  background-color: white;
+  border-radius: 5px;
+  width: 4em;
+  text-align: center;
+  line-height: 2em;
+  height: 2em;
+}
+
+#url{
+  background: $color__lightgrey;
+  padding: 10px;
+  border-radius: 5px;
+  .url{
+    margin-right: 5px;
+  }
+  &>*{
+    display: inline-block;
+
+  }
+}
+.controle{
+  flex: 0 0 auto;
+  padding: 0;
+}
